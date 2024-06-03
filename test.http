@@ -1,0 +1,44 @@
+### Cenário 1 (Válido - 200)
+
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "cep": "59020120"
+}
+
+### Cenário 2 (Válido - 200)
+
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "cep": "01311000"
+}
+
+### Cenário 3 (Inválido - 422)
+
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "cep": "123"
+}
+
+### Cenário 4 (Inválido - 404)
+
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "cep": "33333333"
+}
+
+### Cenário 5 (Inválido - 400)
+
+POST http://localhost:8080/
+Content-Type: application/json
+
+{
+  "cep": ""
+}
